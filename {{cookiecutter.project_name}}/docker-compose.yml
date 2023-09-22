@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  main:
+    image: {{ cookiecutter.project_name }}:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: local
+      args:
+        - STAGE=local
+    volumes:
+      - ./app:/{{cookiecutter.project_name}}/app
+    environment:
+      - STAGE=local
+      {% if cookiecutter.use_mongo == 'y' -%}- MONGO_DB_URL=mongodb://test:test@mongo:27017/dev
+      - MAIN_MONGO_DATABASE=${MAIN_MONGO_DATABASE}
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  mongo:
+    image: mongo:4.4.16
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password123
+    volumes:
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/dev --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+{% endif %}

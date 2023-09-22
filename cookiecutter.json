@@ -1,0 +1,9 @@
+{
+  "project_name": "test_project_name",
+  "description": "project_description",
+  "python_version": "3.11",
+  "author_name": "author_name",
+  "author_email": "author_email",
+  "poetry_version": "1.6.0",
+  "use_mongo": "y"
+}

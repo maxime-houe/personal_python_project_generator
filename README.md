@@ -1,0 +1,1 @@
+# Cookicutter template for Python project.

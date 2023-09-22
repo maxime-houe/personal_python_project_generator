@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "{{cookiecutter.project_name}}"
+version = "0.1.0"
+description = "{{cookiecutter.description}}"
+authors = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
+readme = "README.md"
+repository = "https://github.com/wefight-devs/{{cookiecutter.project_name}}"
+
+[[tool.poetry.source]]
+name = 'pypi_'
+url = 'https://pypi.org/simple'
+
+[tool.poetry.dependencies]
+python = "^{{cookiecutter.python_version}}"
+pydantic = "^1.10.4"
+{% if cookiecutter.use_mongo == 'y' -%}pymongo = { version = "^4.3.3", source = "pypi_", extras = ["srv"] }{% endif %}
+
+[tool.poetry.group.tests]
+optional = true
+
+[tool.poetry.group.tests.dependencies]
+black = "^23.1.0"
+hypothesis = "^6.70.0"
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+
+[tool.poetry.group.local]
+optional = true
+
+[tool.poetry.group.local.dependencies]
+
+[tool.pytest.ini_options]
+python_files = ["*_test.py"]
+markers = [
+    "integration",
+    "unit",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
