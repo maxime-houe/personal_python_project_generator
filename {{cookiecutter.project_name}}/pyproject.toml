@@ -12,7 +12,8 @@ url = 'https://pypi.org/simple'
 
 [tool.poetry.dependencies]
 python = "^{{cookiecutter.python_version}}"
-pydantic = "^1.10.4"
+pydantic = "^2.4.2"
+pydantic-settings = "^2.0.3"
 {% if cookiecutter.use_mongo == 'y' -%}pymongo = { version = "^4.3.3", source = "pypi_", extras = ["srv"] }{% endif %}
 
 [tool.poetry.group.tests]

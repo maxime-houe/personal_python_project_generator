@@ -410,3 +410,4 @@ flycheck_*.el
 
 
 /.docker/
+/local.env

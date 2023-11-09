@@ -12,6 +12,8 @@ services:
       - ./app:/{{cookiecutter.project_name}}/app
     environment:
       - STAGE=local
+    env_file:
+      - local.env
       {% if cookiecutter.use_mongo == 'y' -%}- MONGO_DB_URL=mongodb://test:test@mongo:27017/dev
       - MAIN_MONGO_DATABASE=${MAIN_MONGO_DATABASE}
     depends_on:
