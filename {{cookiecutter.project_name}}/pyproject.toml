@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "{{cookiecutter.description}}"
 authors = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
 readme = "README.md"
-repository = "https://github.com/wefight-devs/{{cookiecutter.project_name}}"
+repository = "https://github.com/maxime-houe/{{cookiecutter.project_name}}"
 
 [[tool.poetry.source]]
 name = 'pypi_'
