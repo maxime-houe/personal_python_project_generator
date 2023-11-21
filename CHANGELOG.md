@@ -2,6 +2,13 @@
 
 
 
+## v0.2.1 (2023-11-21)
+
+### Fix
+
+* fix: error in Dockerfile ([`4f65bac`](https://github.com/maxime-houe/personal_python_project_generator/commit/4f65bac52258129a6182e80efbc9d4af01cded7a))
+
+
 ## v0.2.0 (2023-11-21)
 
 ### Feature
