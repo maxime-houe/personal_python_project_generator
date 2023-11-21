@@ -44,7 +44,7 @@ CMD pytest -v --junitxml=reports/results.xml --cov-report=xml:reports/coverage.x
 
 
 FROM build-main AS build-local
-RUN poetry install --no-interaction --no-ansi --with local,tests
+RUN poetry install --no-interaction --no-ansi --with dev,tests
 
 
 FROM runtime AS local
