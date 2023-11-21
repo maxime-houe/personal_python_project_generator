@@ -2,6 +2,13 @@
 
 
 
+## v0.2.0 (2023-11-21)
+
+### Feature
+
+* feat: add semantic-release support ([`9d90955`](https://github.com/maxime-houe/personal_python_project_generator/commit/9d909558e6da20b32a2a483dd1b21e9be44669d5))
+
+
 ## v0.1.0 (2023-11-21)
 
 ### Documentation
