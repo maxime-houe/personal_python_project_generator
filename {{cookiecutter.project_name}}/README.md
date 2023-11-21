@@ -18,3 +18,12 @@ ln -s ../../hooks/pre-push .git/hooks/pre-push
 chmod +x .git/hooks/pre-commit
 chmod +x .git/hooks/pre-push
 ```
+You also should install dev dependencies with the following command:
+```bash
+poetry install --with dev
+```
+Then, before each commit, you should run 
+```bash
+black .
+```
+This will format the python files accordingly. If not done, the hook will failed.
