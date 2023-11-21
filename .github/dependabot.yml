@@ -1,0 +1,8 @@
+version: 2
+
+updates:
+  - package-ecosystem: "pip"
+    insecure-external-code-execution: allow
+    directory: "/"
+    schedule:
+      interval: "weekly"

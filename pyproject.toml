@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "personal-project-template"
+version = "0.0.0"
+description = ""
+authors = ["Maxime Houé <maxime.houe@wefight.co>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cookiecutter = "^2.4.0"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
