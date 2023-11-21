@@ -11,7 +11,7 @@
 ## How to run the project
 
 ## Contributors
-Run the following command to link the pre-commit hook to your local git repository:
+Run the following command to link the git hooks to your local git repository:
 ```bash
 ln -s ../../hooks/pre-commit .git/hooks/pre-commit
 ln -s ../../hooks/pre-push .git/hooks/pre-push
