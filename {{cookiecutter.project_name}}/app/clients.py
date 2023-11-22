@@ -8,9 +8,6 @@ from pymongo.collection import Collection
 from config import get_settings
 
 
-logger = logging.getLogger(__name__)
-
-
 class Mongo:
     _instance = None
     client: MongoClient = None
@@ -23,7 +20,7 @@ class Mongo:
 
     def __new__(cls):
         if cls._instance is None:
-            logger.info("🌿🌟 Creating new Mongo instance")
+            logging.info("🌿🌟 Creating new Mongo instance")
             cls._instance = super().__new__(cls)
             raw_url = get_settings().mongo_db_url
             cleaned_url = cls.parse_url(raw_url) + "/" + cls.retrieve_main_db()
@@ -66,7 +63,7 @@ class Mongo:
         elif short_match:
             parsed_url = short_match.groupdict()["base"]
         else:
-            logger.warning("🌿⚠️ Can't parse url")
+            logging.warning("🌿⚠️ Can't parse url")
             parsed_url = "mongodb://test:test@mongo:27017"
 
         cleaned_url = parsed_url
