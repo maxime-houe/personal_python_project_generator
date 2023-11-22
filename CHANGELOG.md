@@ -2,6 +2,13 @@
 
 
 
+## v0.2.4 (2023-11-22)
+
+### Fix
+
+* fix: replace logger by logging ([`9d3c3dd`](https://github.com/maxime-houe/personal_python_project_generator/commit/9d3c3ddc931eca03b1c38a9d95f65e506143827b))
+
+
 ## v0.2.3 (2023-11-22)
 
 ### Fix
