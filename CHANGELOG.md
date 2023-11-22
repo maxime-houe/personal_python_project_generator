@@ -2,6 +2,13 @@
 
 
 
+## v0.2.3 (2023-11-22)
+
+### Fix
+
+* fix: add missing todos in mongo client ([`9c6a1ac`](https://github.com/maxime-houe/personal_python_project_generator/commit/9c6a1ace2ee6882c91c1ec000bf196574b36e005))
+
+
 ## v0.2.2 (2023-11-22)
 
 ### Fix
