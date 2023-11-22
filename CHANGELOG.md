@@ -2,6 +2,13 @@
 
 
 
+## v0.2.5 (2023-11-22)
+
+### Fix
+
+* fix: environment variables for mongo ([`0333930`](https://github.com/maxime-houe/personal_python_project_generator/commit/0333930af510febd3a10a72d7f4b416087a5aa26))
+
+
 ## v0.2.4 (2023-11-22)
 
 ### Fix
