@@ -1,5 +1,6 @@
 {% if cookiecutter.use_mongo == 'y' -%}
 from pytest import fixture
+
 from clients import Mongo
 
 

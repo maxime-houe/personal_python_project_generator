@@ -2,7 +2,8 @@ from unittest.mock import MagicMock
 
 from hypothesis import given
 from hypothesis.strategies import text
-from pytest import fixture, mark
+from pytest import mark
+
 from clients import Mongo
 
 
