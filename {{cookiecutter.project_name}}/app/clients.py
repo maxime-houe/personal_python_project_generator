@@ -18,7 +18,8 @@ class Mongo:
     main: Database = None
 
     # Main
-    tags: Collection = None
+    # TODO: update the collections according to your project
+    users: Collection = None
 
     def __new__(cls):
         if cls._instance is None:
@@ -29,13 +30,13 @@ class Mongo:
             cls.client = MongoClient(cleaned_url)
 
             # Define Database instances
+            # TODO: update the initialization of the database according to your project
             cls.main = cls.client[f"{cls.retrieve_main_db()}"]
 
             # Define collections
             ## Main
-            cls.reminders2 = cls.main.reminders2
-            cls.tags = cls.main.tags
-            cls.viks = cls.main.viks
+            # TODO: update the collections according to your project
+            cls.users = cls.main.users
 
         return cls._instance
 
@@ -77,10 +78,10 @@ class Mongo:
         """
         Retrieve the main database name based on the stage.
 
-        - If the stage is prod, use the prod database
-        - If the stage is stage, use the beta database
-        - If the stage is dev, use the dev database
-        - If the stage is test, use the dev database
+        - If the stage is 'prod', use the prod database
+        - If the stage is 'stage', use the beta database
+        - If the stage is 'dev', use the dev database
+        - If the stage is 'test', use the dev database
         - If the stage is anything else, use the dev database
 
         Returns:
