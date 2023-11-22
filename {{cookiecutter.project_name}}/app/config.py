@@ -13,7 +13,12 @@ class Settings(BaseSettings):
     stage: str = "local"
     location: str = "local"
     environment: str = f"{stage}-{location}"
+{% if cookiecutter.use_mongo == 'y' -%}
 
+    # MongoDB
+    mongo_url: str = "mongodb://test:test@localhost:27017/dev"
+    main_mongo_database: str = "dev"
+{% endif %}
 
 
 def configure_log():

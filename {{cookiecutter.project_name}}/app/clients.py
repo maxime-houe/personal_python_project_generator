@@ -22,7 +22,7 @@ class Mongo:
         if cls._instance is None:
             logging.info("🌿🌟 Creating new Mongo instance")
             cls._instance = super().__new__(cls)
-            raw_url = get_settings().mongo_db_url
+            raw_url = get_settings().mongo_url
             cleaned_url = cls.parse_url(raw_url) + "/" + cls.retrieve_main_db()
             cls.client = MongoClient(cleaned_url)
 
