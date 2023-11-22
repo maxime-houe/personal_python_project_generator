@@ -13,9 +13,7 @@ services:
     environment:
       - STAGE=local
     env_file:
-      - local.env
-      {% if cookiecutter.use_mongo == 'y' -%}- MONGO_DB_URL=mongodb://test:test@mongo:27017/dev
-      - MAIN_MONGO_DATABASE=${MAIN_MONGO_DATABASE}
+      - local.env{% if cookiecutter.use_mongo == 'y' -%}
     depends_on:
       mongo:
         condition: service_healthy

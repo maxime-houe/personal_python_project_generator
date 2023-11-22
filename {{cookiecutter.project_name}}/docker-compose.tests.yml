@@ -11,8 +11,7 @@ services:
       - ./tests:/{{cookiecutter.project_name}}/tests
       - ./reports:/{{cookiecutter.project_name}}/reports
     environment:
-      - STAGE=tests
-      {% if cookiecutter.use_mongo == 'y' -%}- MONGO_DB_URL=mongodb://test:test@mongo:27017/dev
+      - STAGE=tests{% if cookiecutter.use_mongo == 'y' -%}
     depends_on:
       mongo:
         condition: service_healthy
