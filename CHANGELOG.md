@@ -2,6 +2,17 @@
 
 
 
+## v0.2.2 (2023-11-22)
+
+### Fix
+
+* fix: minor mongo test ([`47a64df`](https://github.com/maxime-houe/personal_python_project_generator/commit/47a64df4528f1a92ef10b2804c5c91bbecacc6d1))
+
+### Unknown
+
+* doc: update README.md ([`83727d6`](https://github.com/maxime-houe/personal_python_project_generator/commit/83727d689a7abd4003a0948bc6533b739078537f))
+
+
 ## v0.2.1 (2023-11-21)
 
 ### Fix
