@@ -2,6 +2,31 @@
 
 
 
+## v0.2.6 (2023-11-27)
+
+### Build
+
+* build(deps): bump cookiecutter from 2.4.0 to 2.5.0
+
+Bumps [cookiecutter](https://github.com/cookiecutter/cookiecutter) from 2.4.0 to 2.5.0.
+- [Release notes](https://github.com/cookiecutter/cookiecutter/releases)
+- [Changelog](https://github.com/cookiecutter/cookiecutter/blob/main/HISTORY.md)
+- [Commits](https://github.com/cookiecutter/cookiecutter/compare/2.4.0...2.5.0)
+
+---
+updated-dependencies:
+- dependency-name: cookiecutter
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`ef06267`](https://github.com/maxime-houe/personal_python_project_generator/commit/ef0626709e3666f3afd93dad1e324eab04228ff6))
+
+### Fix
+
+* fix: missing service name in pre-push hook ([`92f3324`](https://github.com/maxime-houe/personal_python_project_generator/commit/92f33241126d3df71e0d2943e74a1b2cdd214032))
+
+
 ## v0.2.5 (2023-11-22)
 
 ### Fix
