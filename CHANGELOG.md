@@ -2,6 +2,13 @@
 
 
 
+## v0.2.7 (2023-11-30)
+
+### Fix
+
+* fix: pre-push git hook not working properly ([`d800d50`](https://github.com/maxime-houe/personal_python_project_generator/commit/d800d5005b5d1398327d69a7f9f11beeea044913))
+
+
 ## v0.2.6 (2023-11-27)
 
 ### Build
