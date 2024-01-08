@@ -2,6 +2,13 @@
 
 
 
+## v0.2.8 (2024-01-08)
+
+### Fix
+
+* fix: README.md ([`a899522`](https://github.com/maxime-houe/personal_python_project_generator/commit/a89952233d2c6e6034ca2401eba56115f39e998f))
+
+
 ## v0.2.7 (2023-11-30)
 
 ### Fix
