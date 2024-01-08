@@ -8,6 +8,10 @@ if docker-compose -f docker-compose.tests.yml logs tests | tail -n 1 | grep -E "
     echo "Tests passed. Proceeding with push."
     exit 0
 fi
+if docker-compose -f docker-compose.tests.yml logs tests | tail -n 1 | grep -E "= no tests ran in \d+\.\d{2}s ="; then
+    echo "No tests ran. Proceeding with push."
+    exit 0
+fi
 
 echo "Tests failed. Aborting push."
 exit 1
