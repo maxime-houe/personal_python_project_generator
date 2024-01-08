@@ -7,11 +7,11 @@ Personal template with poetry, docker, semantic-release github workflow.
 - Poetry is installed.
 - At the root of this project, run the command
 ```bash
-poetry install
+poetry install --no-root
 ```
 - Run the command
 ```bash
 cd ..
-cookiecutter personal_project_template
+cookiecutter personal_python_project_generator
 ```
 And follow the instructions.
