@@ -2,6 +2,13 @@
 
 
 
+## v0.2.9 (2024-01-08)
+
+### Fix
+
+* fix: no test case in pre-push file ([`cb479e2`](https://github.com/maxime-houe/personal_python_project_generator/commit/cb479e2cb67b5da631752c7b830792fe7380f222))
+
+
 ## v0.2.8 (2024-01-08)
 
 ### Fix
