@@ -2,6 +2,13 @@
 
 
 
+## v0.3.0 (2024-01-09)
+
+### Feature
+
+* feat: add .run files for jetbrains ([`560d63e`](https://github.com/maxime-houe/personal_python_project_generator/commit/560d63e97c79b9a3f894dc7313b45820617f9bd6))
+
+
 ## v0.2.10 (2024-01-09)
 
 ### Fix
