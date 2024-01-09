@@ -2,6 +2,15 @@
 
 
 
+## v0.2.10 (2024-01-09)
+
+### Fix
+
+* fix: add --no-root flag on poetry install ([`55ed061`](https://github.com/maxime-houe/personal_python_project_generator/commit/55ed0612052db085bfb8b5146579a80638da20f0))
+
+* fix: change name of pypi source in pyproject ([`74ff53d`](https://github.com/maxime-houe/personal_python_project_generator/commit/74ff53d907645bb9a1bb328add48e74157402f6e))
+
+
 ## v0.2.9 (2024-01-08)
 
 ### Fix
