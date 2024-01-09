@@ -7,8 +7,8 @@ readme = "README.md"
 repository = "https://github.com/maxime-houe/{{cookiecutter.project_name}}"
 
 [[tool.poetry.source]]
-name = 'pypi_'
-url = 'https://pypi.org/simple'
+name = "PyPI"
+priority = "primary"
 
 [tool.poetry.dependencies]
 python = "^{{cookiecutter.python_version}}"
