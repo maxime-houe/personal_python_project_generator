@@ -13,7 +13,7 @@ RUN python -m venv --copies $VIRTUAL_ENV
 
 # Take requirements and install them
 COPY pyproject.toml poetry.lock ./
-RUN poetry install --no-interaction --no-ansi --only main
+RUN poetry install --no-interaction --no-ansi --only main --no-root
 
 FROM --platform=linux/amd64 python:{{cookiecutter.python_version}}-slim-bullseye AS runtime
 COPY --from=build-main /venv /venv
@@ -33,7 +33,7 @@ CMD python main.py
 
 
 FROM build-main AS build-tests
-RUN poetry install --no-interaction --no-ansi --with tests
+RUN poetry install --no-interaction --no-ansi --with tests --no-root
 
 
 FROM runtime AS tests
@@ -44,7 +44,7 @@ CMD pytest -v --junitxml=reports/results.xml --cov-report=xml:reports/coverage.x
 
 
 FROM build-main AS build-local
-RUN poetry install --no-interaction --no-ansi --with dev,tests
+RUN poetry install --no-interaction --no-ansi --with dev,tests --no-root
 
 
 FROM runtime AS local
