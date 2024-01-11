@@ -4,10 +4,6 @@
 ## Description
 {{cookiecutter.description}}
 
-## Specifications
-* Python version > Python {{cookiecutter.python_version}}
-* Poetry {{cookiecutter.poetry_version}}
-
 ## How to run the project
 
 ## Contributors
