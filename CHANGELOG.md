@@ -2,6 +2,13 @@
 
 
 
+## v0.3.1 (2024-01-11)
+
+### Fix
+
+* fix: remove useless stuff in readme ([`76f1300`](https://github.com/maxime-houe/personal_python_project_generator/commit/76f13003c89419966509377a2b9e0a14066e2340))
+
+
 ## v0.3.0 (2024-01-09)
 
 ### Feature
