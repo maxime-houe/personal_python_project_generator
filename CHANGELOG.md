@@ -2,6 +2,30 @@
 
 
 
+## v0.3.2 (2024-01-17)
+
+### Build
+
+* build(deps): bump jinja2 from 3.1.2 to 3.1.3
+
+Bumps [jinja2](https://github.com/pallets/jinja) from 3.1.2 to 3.1.3.
+- [Release notes](https://github.com/pallets/jinja/releases)
+- [Changelog](https://github.com/pallets/jinja/blob/main/CHANGES.rst)
+- [Commits](https://github.com/pallets/jinja/compare/3.1.2...3.1.3)
+
+---
+updated-dependencies:
+- dependency-name: jinja2
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`aba81dc`](https://github.com/maxime-houe/personal_python_project_generator/commit/aba81dc859a6e1c817c447569182461edfcb4efc))
+
+### Fix
+
+* fix: typo in README.md ([`75f7b04`](https://github.com/maxime-houe/personal_python_project_generator/commit/75f7b04a29b130573024b09f948d70405ded5a60))
+
+
 ## v0.3.1 (2024-01-11)
 
 ### Fix
