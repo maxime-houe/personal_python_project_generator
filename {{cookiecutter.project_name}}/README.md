@@ -19,7 +19,7 @@ chmod +x .git/hooks/pre-push
 #### Dev dependencies
 You also should install dev dependencies with the following command:
 ```bash
-poetry install --with dev
+poetry install --with dev --no-root
 ```
 ### Contributing
 #### Code formatting
@@ -28,7 +28,7 @@ Before each commit, you should run
 ```bash
 black .
 ```
-This will format the python files accordingly. If not done, the pre-commit hook will failed.
+This will format the python files accordingly. If not done, the pre-commit hook will fail.
 #### Commit message
 The project follows the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) convention.
 Please follow the convention when you write your commit message.
