@@ -2,6 +2,13 @@
 
 
 
+## v0.3.3 (2024-01-22)
+
+### Fix
+
+* fix: please black and remove useless TODOs ([`bc14931`](https://github.com/maxime-houe/personal_python_project_generator/commit/bc14931b5aafbe91cc82d2322158c6645b5b4f28))
+
+
 ## v0.3.2 (2024-01-17)
 
 ### Build
