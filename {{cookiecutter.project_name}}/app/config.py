@@ -20,7 +20,6 @@ class Settings(BaseSettings):
     main_mongo_database: str = "dev"
 {% endif %}
 
-
 def configure_log():
     logging.basicConfig(
         level=logging.DEBUG,
