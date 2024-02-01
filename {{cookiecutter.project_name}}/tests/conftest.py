@@ -1,4 +1,4 @@
-{% if cookiecutter.use_mongo == 'y' -%}
+{% if cookiecutter.add_mongo_support == 'y' -%}
 from pytest import fixture
 
 from clients import Mongo

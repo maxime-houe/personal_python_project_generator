@@ -14,7 +14,7 @@ priority = "primary"
 python = "^{{cookiecutter.python_version}}"
 pydantic = "^2.4.2"
 pydantic-settings = "^2.0.3"
-{% if cookiecutter.use_mongo == 'y' -%}pymongo = { version = "^4.3.3", source = "pypi_", extras = ["srv"] }{% endif %}
+{% if cookiecutter.add_mongo_support == 'y' -%}pymongo = { version = "^4.3.3", source = "pypi_", extras = ["srv"] }{% endif %}
 
 [tool.poetry.group.tests]
 optional = true

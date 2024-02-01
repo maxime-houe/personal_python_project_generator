@@ -2,7 +2,7 @@ import os
 
 mongo_files = ["scripts/dump_db.sh", "scripts/mongo-init.js", "app/clients.py", "tests/clients_test.py"]
 REMOVE_MONGO_PATHS = [
-    '{% if cookiecutter.use_mongo != "y" %}' + file + '{% endif %}'
+    '{% if cookiecutter.add_mongo_support != "y" %}' + file + '{% endif %}'
     for file in mongo_files
 ]
 
