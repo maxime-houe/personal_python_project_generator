@@ -5,5 +5,5 @@
   "author_name": "author_name",
   "author_email": "author_email",
   "poetry_version": "1.6.0",
-  "use_mongo": "y"
+  "add_mongo_support": "n"
 }
