@@ -14,5 +14,6 @@ if docker-compose -f docker-compose.tests.yml logs tests | tail -n 1 | grep -E "
     exit 0
 fi
 
-echo "Tests failed. Aborting push."{% endif %}
+echo "Tests failed. Aborting push."
 exit 1
+{% endif %}

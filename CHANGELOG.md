@@ -2,6 +2,25 @@
 
 
 
+## v0.4.0 (2024-02-01)
+
+### Feature
+
+* feat(docker): docker support is an option ([`6cf1de7`](https://github.com/maxime-houe/personal_python_project_generator/commit/6cf1de73d31e713521bed590029df54437584fd7))
+
+### Fix
+
+* fix: add black ([`f94a50f`](https://github.com/maxime-houe/personal_python_project_generator/commit/f94a50fa98af7323c3c04858848515a2dcc4301b))
+
+### Refactor
+
+* refactor: replace use_mongo by add_mongo_support and set default to n ([`ec75ceb`](https://github.com/maxime-houe/personal_python_project_generator/commit/ec75ceb6dc8548d8447d77882f25f2bf7381fc1f))
+
+### Unknown
+
+* doc: add git init command ([`39b0691`](https://github.com/maxime-houe/personal_python_project_generator/commit/39b0691d94d3456dbdbee831f711a1d56893d758))
+
+
 ## v0.3.3 (2024-01-22)
 
 ### Fix
