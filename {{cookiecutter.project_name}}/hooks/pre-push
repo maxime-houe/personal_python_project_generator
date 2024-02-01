@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Running pre-push hook"
+{% if cookiecutter.add_docker_support == "y" -%}
 docker-compose -f docker-compose.tests.yml up tests
 
 # Check the exit status of the tests
@@ -13,5 +14,5 @@ if docker-compose -f docker-compose.tests.yml logs tests | tail -n 1 | grep -E "
     exit 0
 fi
 
-echo "Tests failed. Aborting push."
+echo "Tests failed. Aborting push."{% endif %}
 exit 1
