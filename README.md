@@ -15,3 +15,8 @@ cd ..
 cookiecutter personal_python_project_generator
 ```
 And follow the instructions.
+
+- Initialize git repository if wanted
+```bash
+git init
+```
