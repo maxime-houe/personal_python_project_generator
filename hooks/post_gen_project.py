@@ -1,8 +1,13 @@
 import os
 
-mongo_files = ["scripts/dump_db.sh", "scripts/mongo-init.js", "app/clients.py", "tests/clients_test.py"]
+mongo_files = [
+    "scripts/dump_db.sh",
+    "scripts/mongo-init.js",
+    "app/clients.py",
+    "tests/clients_test.py",
+]
 REMOVE_MONGO_PATHS = [
-    '{% if cookiecutter.add_mongo_support != "y" %}' + file + '{% endif %}'
+    '{% if cookiecutter.add_mongo_support != "y" %}' + file + "{% endif %}"
     for file in mongo_files
 ]
 
@@ -25,7 +30,7 @@ docker_files = [
 ]
 
 REMOVE_DOCKER_PATHS = [
-    '{% if cookiecutter.add_docker_support != "y" %}' + file + '{% endif %}'
+    '{% if cookiecutter.add_docker_support != "y" %}' + file + "{% endif %}"
     for file in docker_files
 ]
 
