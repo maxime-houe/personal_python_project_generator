@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-cookiecutter = "^2.5.0"
+cookiecutter = "^2.6.0"
 black = "^24.2.0"
 
 [tool.semantic_release]
