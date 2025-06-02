@@ -1,7 +1,6 @@
 {% if cookiecutter.add_mongo_support == 'y' -%}
-from pytest import fixture
-
 from clients import Mongo
+from pytest import fixture
 
 
 @fixture(scope="session")

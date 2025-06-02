@@ -1,4 +1,5 @@
 import os
+import shutil
 
 mongo_files = [
     "scripts/dump_db.sh",
@@ -6,19 +7,6 @@ mongo_files = [
     "app/clients.py",
     "tests/clients_test.py",
 ]
-REMOVE_MONGO_PATHS = [
-    '{% if cookiecutter.add_mongo_support != "y" %}' + file + "{% endif %}"
-    for file in mongo_files
-]
-
-for path in REMOVE_MONGO_PATHS:
-    path = path.strip()
-    if path and os.path.exists(path):
-        if os.path.isdir(path):
-            os.rmdir(path)
-        else:
-            os.unlink(path)
-
 
 docker_files = [
     "docker-compose.yml",
@@ -29,15 +17,22 @@ docker_files = [
     ".dockerignore",
 ]
 
-REMOVE_DOCKER_PATHS = [
-    '{% if cookiecutter.add_docker_support != "y" %}' + file + "{% endif %}"
-    for file in docker_files
-]
 
-for path in REMOVE_DOCKER_PATHS:
-    path = path.strip()
-    if path and os.path.exists(path):
-        if os.path.isdir(path):
-            os.rmdir(path)
-        else:
-            os.unlink(path)
+def remove_paths(paths):
+    for path in paths:
+        if os.path.exists(path):
+            if os.path.isdir(path):
+                shutil.rmtree(path)
+            else:
+                os.remove(path)
+
+
+# Get user choices from environment variables set by Cookiecutter
+add_mongo = os.environ.get("COOKIECUTTER_ADD_MONGO_SUPPORT", "n")
+add_docker = os.environ.get("COOKIECUTTER_ADD_DOCKER_SUPPORT", "n")
+
+if add_mongo.lower() != "y":
+    remove_paths(mongo_files)
+
+if add_docker.lower() != "y":
+    remove_paths(docker_files)
