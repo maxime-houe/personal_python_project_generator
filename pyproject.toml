@@ -1,6 +1,6 @@
 [project]
 name = "personal-python-project-generator"
-version = "0.4.0"
+version = "1.0.0"
 description = "My personal Python project generator"
 authors = [
     { name = "Maxime Houé", email = "maxhoue@gmail.com" }
@@ -26,5 +26,5 @@ version_toml = [
 
 [dependency-groups]
 dev = [
-    "semantic-release>=0.1.0",
+    "python-semantic-release>=0.1.0",
 ]
