@@ -23,3 +23,8 @@ exclude = ["hooks*"]
 version_toml = [
     "pyproject.toml:project.version",
 ]
+
+[dependency-groups]
+dev = [
+    "semantic-release>=0.1.0",
+]

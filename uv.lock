@@ -254,8 +254,16 @@ dependencies = [
     { name = "cookiecutter" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "semantic-release" },
+]
+
 [package.metadata]
 requires-dist = [{ name = "cookiecutter", specifier = ">=2.6.0" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "semantic-release", specifier = ">=0.1.0" }]
 
 [[package]]
 name = "pygments"
@@ -361,6 +369,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/a1/53/830aa4c3066a8ab0ae9a9955976fb770fe9c6102117c8ec4ab3ea62d89e8/rich-14.0.0.tar.gz", hash = "sha256:82f1bc23a6a21ebca4ae0c45af9bdbc492ed20231dcb63f297d6d1021a9d5725", size = 224078, upload-time = "2025-03-30T14:15:14.23Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0d/9b/63f4c7ebc259242c89b3acafdb37b41d1185c07ff0011164674e9076b491/rich-14.0.0-py3-none-any.whl", hash = "sha256:1c9491e1951aac09caffd42f448ee3d04e58923ffe14993f6e83068dc395d7e0", size = 243229, upload-time = "2025-03-30T14:15:12.283Z" },
+]
+
+[[package]]
+name = "semantic-release"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4c/2a/17b0cd7ce4ff495c31519f8efa0f8c3eaccfbaa2426ddf3ddf2944859c76/semantic-release-0.1.0.tar.gz", hash = "sha256:943c4d2f5bf2f42958c1868f3c5ccabfcade6017d9d7562192d24053fb2c8efa", size = 1554, upload-time = "2020-04-26T17:39:45.641Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ba/44/c2ed0a3a588fd3efa9cf5a7a544a90ae29546b3043752c38c11b0ee58a10/semantic_release-0.1.0-py3-none-any.whl", hash = "sha256:ac7bbd0aaf3bad04d812fae2979386388c9c9a1af489ed97f3fdbaa24eef2a2b", size = 1950, upload-time = "2020-04-26T17:39:47.614Z" },
 ]
 
 [[package]]
