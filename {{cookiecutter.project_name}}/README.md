@@ -19,7 +19,7 @@ chmod +x .git/hooks/pre-push
 #### Dev dependencies
 You also should install dev dependencies with the following command:
 ```bash
-poetry install --with dev --no-root
+uv sync
 ```
 ### Contributing
 #### Code formatting

@@ -20,13 +20,3 @@ if not re.match(PYTHON_VERSION_REGEX, python_version):
 
     # exits with status 1 to indicate failure
     sys.exit(1)
-
-# POETRY VERSION CHECK
-POETRY_VERSION_REGEX = r"^[0-9]+\.[0-9]+\.[0-9]+$"
-poetry_version = "{{ cookiecutter.poetry_version }}"
-
-if not re.match(POETRY_VERSION_REGEX, poetry_version):
-    print("ERROR: %s is not a valid Poetry version!" % poetry_version)
-
-    # exits with status 1 to indicate failure
-    sys.exit(1)

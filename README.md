@@ -7,12 +7,13 @@ Personal template with poetry, docker, semantic-release github workflow.
 - Poetry is installed.
 - At the root of this project, run the command
 ```bash
-poetry install --no-root
+uv sync
 ```
 - Run the command
 ```bash
 cd ..
 cookiecutter personal_python_project_generator
+uv lock
 ```
 And follow the instructions.
 

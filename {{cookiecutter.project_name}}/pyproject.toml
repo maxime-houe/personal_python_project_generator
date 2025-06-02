@@ -1,51 +1,50 @@
-[tool.poetry]
+[project]
 name = "{{cookiecutter.project_name}}"
-version = "0.0.0"
+version = "0.1.0"
 description = "{{cookiecutter.description}}"
-authors = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
+authors = [
+    { name = "{{cookiecutter.author_name}}", email = "{{cookiecutter.author_email}}" }
+]
 readme = "README.md"
-repository = "https://github.com/maxime-houe/{{cookiecutter.project_name}}"
+requires-python = ">={{cookiecutter.python_version}}"
 
-[[tool.poetry.source]]
-name = "PyPI"
-priority = "primary"
+dependencies = [
+    "pydantic>=2.11.4",
+    "pydantic-settings>=2.9.1",
+    {% if cookiecutter.add_mongo_support == 'y' -%}"pymongo[srv]>=4.3.3"{% endif %}
+]
 
-[tool.poetry.dependencies]
-python = "^{{cookiecutter.python_version}}"
-pydantic = "^2.4.2"
-pydantic-settings = "^2.0.3"
-{% if cookiecutter.add_mongo_support == 'y' -%}pymongo = { version = "^4.3.3", source = "pypi_", extras = ["srv"] }{% endif %}
+[dependency-groups]
+dev = [
+  "hypothesis>=6.133.0",
+  "pytest>=8.3.5",
+  "pytest-cov>=6.1.1",
+]
 
-[tool.poetry.group.tests]
-optional = true
+[tool.pydantic]
+model_config = { use_enum_values = true }
 
-[tool.poetry.group.tests.dependencies]
-hypothesis = "^6.70.0"
-pytest = "^7.4.3"
-pytest-cov = "^4.0.0"
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
 
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-black = "^23.1.0"
-python-semantic-release = "^8.3.0"
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["hooks*"]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
 python_files = ["*_test.py"]
 markers = [
     "integration",
     "unit",
 ]
+
 [tool.semantic_release]
 version_variables = [
     "app/config.py:__version__",
 ]
 version_toml = [
-    "pyproject.toml:tool.poetry.version",
+    "pyproject.toml:project.version",
 ]
-
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"

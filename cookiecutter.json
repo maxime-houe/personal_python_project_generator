@@ -4,7 +4,6 @@
   "python_version": "3.11",
   "author_name": "author_name",
   "author_email": "author_email",
-  "poetry_version": "1.6.0",
   "add_mongo_support": "n",
   "add_docker_support": "y"
 }

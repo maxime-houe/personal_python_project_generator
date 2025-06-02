@@ -18,14 +18,13 @@ jobs:
         with:
           python-version: '{{ cookiecutter.python_version }}'
 
-      - name: "Install Poetry"
+      - name: "Install uv"
         run: |
-          curl -sSL https://install.python-poetry.org | python3 - --version {{cookiecutter.poetry_version}} && \
-          export PATH="/root/.local/bin:$PATH"
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: "Poetry lock"
+      - name: "uv lock"
         run: |
-          poetry lock
+          uv lock
 
       - name: "Commit new lock file"
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -33,4 +32,4 @@ jobs:
           commit_message: "ci: Update lock file"
           commit_user_name: "Lock BOT"
           commit_user_email: "lock_bot@gmail.com"
-          file_pattern: poetry.lock
+          file_pattern: uv.lock

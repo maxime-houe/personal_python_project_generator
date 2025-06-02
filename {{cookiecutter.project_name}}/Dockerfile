@@ -2,18 +2,17 @@ FROM --platform=linux/amd64 python:{{cookiecutter.python_version}}-slim-bullseye
 RUN apt-get update --fix-missing && \
     apt-get install -y build-essential
 
-ENV POETRY_VERSION={{cookiecutter.poetry_version}}
 ENV VIRTUAL_ENV=/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-# Install poetry and setup venv
-RUN pip install "poetry==$POETRY_VERSION"
+# Install uv and setup venv
+RUN pip install uv
 RUN python -m venv --copies $VIRTUAL_ENV
 
 # Take requirements and install them
-COPY pyproject.toml poetry.lock ./
-RUN poetry install --no-interaction --no-ansi --only main --no-root
+COPY pyproject.toml uv.lock ./
+RUN uv sync --no-dev
 
 FROM --platform=linux/amd64 python:{{cookiecutter.python_version}}-slim-bullseye AS runtime
 COPY --from=build-main /venv /venv
@@ -33,7 +32,7 @@ CMD python main.py
 
 
 FROM build-main AS build-tests
-RUN poetry install --no-interaction --no-ansi --with tests --no-root
+RUN uv sync --group tests --no-dev
 
 
 FROM runtime AS tests
@@ -44,7 +43,7 @@ CMD pytest -v --junitxml=reports/results.xml --cov-report=xml:reports/coverage.x
 
 
 FROM build-main AS build-local
-RUN poetry install --no-interaction --no-ansi --with dev,tests --no-root
+RUN uv sync --group dev,tests
 
 
 FROM runtime AS local

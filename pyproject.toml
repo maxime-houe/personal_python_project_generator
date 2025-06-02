@@ -1,20 +1,25 @@
-[tool.poetry]
-name = "personal-project-template"
+[project]
+name = "personal-python-project-generator"
 version = "0.4.0"
-description = ""
-authors = ["Maxime Houé <maxime.houe@wefight.co>"]
+description = "My personal Python project generator"
+authors = [
+    { name = "Maxime Houé", email = "maxhoue@gmail.com" }
+]
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-cookiecutter = "^2.6.0"
-black = "^25.1.0"
-
-[tool.semantic_release]
-version_toml = [
-    "pyproject.toml:tool.poetry.version",
+requires-python = ">=3.10"
+dependencies = [
+    "cookiecutter>=2.6.0",
 ]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["hooks*"]
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:project.version",
+]
