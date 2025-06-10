@@ -1,10 +1,10 @@
 # Cookicutter template for Python project.
 
 ## Description
-Personal template with poetry, docker, semantic-release github workflow.
+Personal template with uv, docker, semantic-release github workflow.
 
 ## How to run the project
-- Poetry is installed.
+- uv is installed.
 - At the root of this project, run the command
 ```bash
 uv sync
