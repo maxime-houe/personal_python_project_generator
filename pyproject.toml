@@ -26,5 +26,5 @@ version_toml = [
 
 [dependency-groups]
 dev = [
-    "python-semantic-release>=0.1.0",
+    "python-semantic-release>=10.0.2",
 ]
